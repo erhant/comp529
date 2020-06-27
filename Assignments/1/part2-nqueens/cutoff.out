@@ -1,0 +1,267 @@
+Setting stack size to unlimited...
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 2062728
+max locked memory       (kbytes, -l) unlimited
+max memory size         (kbytes, -m) 460800000
+open files                      (-n) 1024
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 4096
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+
+Running Job...!
+===============================================================================
+Running compiled binary...
+Compact Affinity
+Serial, size 14
+Elapsed time: 4.888114
+Parallel, size 14, 2 threads, cutoff 2
+Using cutoff depth of 2 with 2 threads.
+365596 solutions found.
+Elapsed time: 5.074658
+Parallel, size 14, 4 threads, cutoff 2
+Using cutoff depth of 2 with 4 threads.
+365596 solutions found.
+Elapsed time: 3.049634
+Parallel, size 14, 8 threads, cutoff 2
+Using cutoff depth of 2 with 8 threads.
+365596 solutions found.
+Elapsed time: 2.265499
+Parallel, size 14, 16 threads, cutoff 2
+Using cutoff depth of 2 with 16 threads.
+365596 solutions found.
+Elapsed time: 2.460938
+Parallel, size 14, 32 threads, cutoff 2
+Using cutoff depth of 2 with 32 threads.
+365596 solutions found.
+Elapsed time: 4.072520
+Parallel, size 14, 2 threads, cutoff 4
+Using cutoff depth of 4 with 2 threads.
+365596 solutions found.
+Elapsed time: 5.422604
+Parallel, size 14, 4 threads, cutoff 4
+Using cutoff depth of 4 with 4 threads.
+365596 solutions found.
+Elapsed time: 3.248808
+Parallel, size 14, 8 threads, cutoff 4
+Using cutoff depth of 4 with 8 threads.
+365596 solutions found.
+Elapsed time: 2.622344
+Parallel, size 14, 16 threads, cutoff 4
+Using cutoff depth of 4 with 16 threads.
+365596 solutions found.
+Elapsed time: 2.448280
+Parallel, size 14, 32 threads, cutoff 4
+Using cutoff depth of 4 with 32 threads.
+365596 solutions found.
+Elapsed time: 3.757244
+Parallel, size 14, 2 threads, cutoff 5
+Using cutoff depth of 5 with 2 threads.
+365596 solutions found.
+Elapsed time: 5.897430
+Parallel, size 14, 4 threads, cutoff 5
+Using cutoff depth of 5 with 4 threads.
+365596 solutions found.
+Elapsed time: 3.372729
+Parallel, size 14, 8 threads, cutoff 5
+Using cutoff depth of 5 with 8 threads.
+365596 solutions found.
+Elapsed time: 2.259052
+Parallel, size 14, 16 threads, cutoff 5
+Using cutoff depth of 5 with 16 threads.
+365596 solutions found.
+Elapsed time: 2.635119
+Parallel, size 14, 32 threads, cutoff 5
+Using cutoff depth of 5 with 32 threads.
+365596 solutions found.
+Elapsed time: 4.149257
+Parallel, size 14, 2 threads, cutoff 6
+Using cutoff depth of 6 with 2 threads.
+365596 solutions found.
+Elapsed time: 5.798363
+Parallel, size 14, 4 threads, cutoff 6
+Using cutoff depth of 6 with 4 threads.
+365596 solutions found.
+Elapsed time: 3.375832
+Parallel, size 14, 8 threads, cutoff 6
+Using cutoff depth of 6 with 8 threads.
+365596 solutions found.
+Elapsed time: 2.640464
+Parallel, size 14, 16 threads, cutoff 6
+Using cutoff depth of 6 with 16 threads.
+365596 solutions found.
+Elapsed time: 2.372099
+Parallel, size 14, 32 threads, cutoff 6
+Using cutoff depth of 6 with 32 threads.
+365596 solutions found.
+Elapsed time: 3.900380
+Parallel, size 14, 2 threads, cutoff 8
+Using cutoff depth of 8 with 2 threads.
+365596 solutions found.
+Elapsed time: 5.864827
+Parallel, size 14, 4 threads, cutoff 8
+Using cutoff depth of 8 with 4 threads.
+365596 solutions found.
+Elapsed time: 3.313553
+Parallel, size 14, 8 threads, cutoff 8
+Using cutoff depth of 8 with 8 threads.
+365596 solutions found.
+Elapsed time: 2.310712
+Parallel, size 14, 16 threads, cutoff 8
+Using cutoff depth of 8 with 16 threads.
+365596 solutions found.
+Elapsed time: 2.612702
+Parallel, size 14, 32 threads, cutoff 8
+Using cutoff depth of 8 with 32 threads.
+365596 solutions found.
+Elapsed time: 4.584933
+Parallel, size 14, 2 threads, cutoff 10
+Using cutoff depth of 10 with 2 threads.
+365596 solutions found.
+Elapsed time: 6.252698
+Parallel, size 14, 4 threads, cutoff 10
+Using cutoff depth of 10 with 4 threads.
+365596 solutions found.
+Elapsed time: 3.892666
+Parallel, size 14, 8 threads, cutoff 10
+Using cutoff depth of 10 with 8 threads.
+365596 solutions found.
+Elapsed time: 2.378024
+Parallel, size 14, 16 threads, cutoff 10
+Using cutoff depth of 10 with 16 threads.
+365596 solutions found.
+Elapsed time: 2.419448
+Parallel, size 14, 32 threads, cutoff 10
+Using cutoff depth of 10 with 32 threads.
+365596 solutions found.
+Elapsed time: 4.542093
+Scatter Affinity
+Serial, size 14
+Elapsed time: 4.886945
+Parallel, size 14, 2 threads, cutoff 2
+Using cutoff depth of 2 with 2 threads.
+365596 solutions found.
+Elapsed time: 7.126582
+Parallel, size 14, 4 threads, cutoff 2
+Using cutoff depth of 2 with 4 threads.
+365596 solutions found.
+Elapsed time: 4.893966
+Parallel, size 14, 8 threads, cutoff 2
+Using cutoff depth of 2 with 8 threads.
+365596 solutions found.
+Elapsed time: 4.713496
+Parallel, size 14, 16 threads, cutoff 2
+Using cutoff depth of 2 with 16 threads.
+365596 solutions found.
+Elapsed time: 3.874477
+Parallel, size 14, 32 threads, cutoff 2
+Using cutoff depth of 2 with 32 threads.
+365596 solutions found.
+Elapsed time: 3.879665
+Parallel, size 14, 2 threads, cutoff 4
+Using cutoff depth of 4 with 2 threads.
+365596 solutions found.
+Elapsed time: 7.207482
+Parallel, size 14, 4 threads, cutoff 4
+Using cutoff depth of 4 with 4 threads.
+365596 solutions found.
+Elapsed time: 4.254887
+Parallel, size 14, 8 threads, cutoff 4
+Using cutoff depth of 4 with 8 threads.
+365596 solutions found.
+Elapsed time: 4.652297
+Parallel, size 14, 16 threads, cutoff 4
+Using cutoff depth of 4 with 16 threads.
+365596 solutions found.
+Elapsed time: 4.316772
+Parallel, size 14, 32 threads, cutoff 4
+Using cutoff depth of 4 with 32 threads.
+365596 solutions found.
+Elapsed time: 4.098743
+Parallel, size 14, 2 threads, cutoff 5
+Using cutoff depth of 5 with 2 threads.
+365596 solutions found.
+Elapsed time: 6.987118
+Parallel, size 14, 4 threads, cutoff 5
+Using cutoff depth of 5 with 4 threads.
+365596 solutions found.
+Elapsed time: 4.530106
+Parallel, size 14, 8 threads, cutoff 5
+Using cutoff depth of 5 with 8 threads.
+365596 solutions found.
+Elapsed time: 3.897173
+Parallel, size 14, 16 threads, cutoff 5
+Using cutoff depth of 5 with 16 threads.
+365596 solutions found.
+Elapsed time: 3.712381
+Parallel, size 14, 32 threads, cutoff 5
+Using cutoff depth of 5 with 32 threads.
+365596 solutions found.
+Elapsed time: 3.890857
+Parallel, size 14, 2 threads, cutoff 6
+Using cutoff depth of 6 with 2 threads.
+365596 solutions found.
+Elapsed time: 7.566161
+Parallel, size 14, 4 threads, cutoff 6
+Using cutoff depth of 6 with 4 threads.
+365596 solutions found.
+Elapsed time: 5.188123
+Parallel, size 14, 8 threads, cutoff 6
+Using cutoff depth of 6 with 8 threads.
+365596 solutions found.
+Elapsed time: 3.736762
+Parallel, size 14, 16 threads, cutoff 6
+Using cutoff depth of 6 with 16 threads.
+365596 solutions found.
+Elapsed time: 4.097163
+Parallel, size 14, 32 threads, cutoff 6
+Using cutoff depth of 6 with 32 threads.
+365596 solutions found.
+Elapsed time: 3.774348
+Parallel, size 14, 2 threads, cutoff 8
+Using cutoff depth of 8 with 2 threads.
+365596 solutions found.
+Elapsed time: 7.405085
+Parallel, size 14, 4 threads, cutoff 8
+Using cutoff depth of 8 with 4 threads.
+365596 solutions found.
+Elapsed time: 4.713126
+Parallel, size 14, 8 threads, cutoff 8
+Using cutoff depth of 8 with 8 threads.
+365596 solutions found.
+Elapsed time: 5.141705
+Parallel, size 14, 16 threads, cutoff 8
+Using cutoff depth of 8 with 16 threads.
+365596 solutions found.
+Elapsed time: 5.433472
+Parallel, size 14, 32 threads, cutoff 8
+Using cutoff depth of 8 with 32 threads.
+365596 solutions found.
+Elapsed time: 4.202973
+Parallel, size 14, 2 threads, cutoff 10
+Using cutoff depth of 10 with 2 threads.
+365596 solutions found.
+Elapsed time: 8.191681
+Parallel, size 14, 4 threads, cutoff 10
+Using cutoff depth of 10 with 4 threads.
+365596 solutions found.
+Elapsed time: 5.428673
+Parallel, size 14, 8 threads, cutoff 10
+Using cutoff depth of 10 with 8 threads.
+365596 solutions found.
+Elapsed time: 4.544217
+Parallel, size 14, 16 threads, cutoff 10
+Using cutoff depth of 10 with 16 threads.
+365596 solutions found.
+Elapsed time: 3.835883
+Parallel, size 14, 32 threads, cutoff 10
+Using cutoff depth of 10 with 32 threads.
+365596 solutions found.
+Elapsed time: 4.746738

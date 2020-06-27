@@ -1,0 +1,476 @@
+Setting stack size to unlimited...
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 514842
+max locked memory       (kbytes, -l) unlimited
+max memory size         (kbytes, -m) 153600000
+open files                      (-n) 51200
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 4096
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+
+Running Job...!
+===============================================================================
+Running compiled binary...
+ 
+All tests are on coffee.pgm with -iter 100
+ 
+##################################################################################################
+Serial
+Reading image...
+Image Read. Width : 5184, Height : 3456, nComp: 1
+Time spent in different stages of the application:
+ 0.000001 s => Part I: allocate and initialize variables
+ 0.000005 s => Part II: parse command line arguments
+ 0.024365 s => Part III: read image
+ 0.001781 s => Part IV: allocate variables
+77.252943 s => Part V: compute
+ 1.058139 s => Part VI: write image to file
+ 0.024568 s => Part VII: get average of sum of pixels for testing and calculate GFLOPS
+ 0.024568 s => Part VIII: deallocate variables
+Total time: 78.363851 s
+Average of sum of pixels: 116.074287
+GFLOPS: 1.043135
+ 
+##################################################################################################
+Parallel V1 - All Global Access
+Reading image...
+Image Read. Width : 5184, Height : 3456, nComp: 1
+
+	Blocks per grid: (648, 432, 1)
+	Threads per block: (8, 8, 1)
+
+Time spent in different stages of the application:
+ 0.000001 s => Part I: allocate and initialize variables
+ 0.000007 s => Part II: parse command line arguments
+ 0.015123 s => Part III: read image
+ 0.104872 s => Part IV: allocate variables
+ 8.661497 s => Part V: compute
+ 1.311581 s => Part VI: write image to file
+ 0.024776 s => Part VII: get average of sum of pixels for testing and calculate GFLOPS
+ 0.024776 s => Part VIII: deallocate variables
+Total time: 10.154832 s
+Average of sum of pixels: 116.074203
+GFLOPS: 9.303851
+ 
+##################################################################################################
+Parallel V2 - Data reuse with in-thread registers
+Reading image...
+Image Read. Width : 5184, Height : 3456, nComp: 1
+
+	Blocks per grid: (648, 432, 1)
+	Threads per block: (8, 8, 1)
+
+Time spent in different stages of the application:
+ 0.000002 s => Part I: allocate and initialize variables
+ 0.000006 s => Part II: parse command line arguments
+ 0.016079 s => Part III: read image
+ 0.104071 s => Part IV: allocate variables
+ 8.339383 s => Part V: compute
+ 1.314471 s => Part VI: write image to file
+ 0.025188 s => Part VII: get average of sum of pixels for testing and calculate GFLOPS
+ 0.025188 s => Part VIII: deallocate variables
+Total time:  9.836245 s
+Average of sum of pixels: 116.074219
+GFLOPS: 9.663218
+ 
+##################################################################################################
+Parallel V3 - Shared memory on Kernel 2
+Reading image...
+Image Read. Width : 5184, Height : 3456, nComp: 1
+
+	Blocks per grid: (648, 432, 1)
+	Threads per block: (8, 8, 1)
+
+Time spent in different stages of the application:
+ 0.000003 s => Part I: allocate and initialize variables
+ 0.000014 s => Part II: parse command line arguments
+ 0.012574 s => Part III: read image
+ 0.090823 s => Part IV: allocate variables
+ 8.320657 s => Part V: compute
+ 4.630762 s => Part VI: write image to file
+ 0.024945 s => Part VII: get average of sum of pixels for testing and calculate GFLOPS
+ 0.024945 s => Part VIII: deallocate variables
+Total time: 13.116610 s
+Average of sum of pixels: 116.088478
+GFLOPS: 9.684966
+ 
+##################################################################################################
+Parallel V4 - Shared Memory and extra optimizations, CK1: 1, CK2: 1, No Pinned
+Reading image...
+Image Read. Width : 5184, Height : 3456, nComp: 1
+
+	Blocks per grid: (648, 432, 1)
+	Threads per block: (8, 8, 1)
+
+	Reduction Info: 
+		Lvl. 1: (5184,3456) image reduced to (648 * 432) array.
+		Lvl. 2: That (279936) reduced to a (4374) array.
+
+Time spent in different stages of the application:
+ 0.000001 s => Part I: allocate and initialize variables
+ 0.000007 s => Part II: parse command line arguments
+ 1.347163 s => Part III: read image
+ 0.098788 s => Part IV: allocate variables
+ 1.622239 s => Part V: compute
+ 1.332802 s => Part VI: write image to file
+ 0.025346 s => Part VII: get average of sum of pixels for testing and calculate GFLOPS
+ 0.025346 s => Part VIII: deallocate variables
+Total time:  4.463893 s
+Average of sum of pixels: 116.080063
+GFLOPS: 49.675350
+Parallel V4 - Shared Memory and extra optimizations, CK1: 1, CK2: 2, No Pinned
+Reading image...
+Image Read. Width : 5184, Height : 3456, nComp: 1
+
+	Blocks per grid: (648, 432, 1)
+	Threads per block: (8, 8, 1)
+
+	Reduction Info: 
+		Lvl. 1: (5184,3456) image reduced to (648 * 432) array.
+		Lvl. 2: That (279936) reduced to a (4374) array.
+
+Time spent in different stages of the application:
+ 0.000001 s => Part I: allocate and initialize variables
+ 0.000007 s => Part II: parse command line arguments
+ 0.470658 s => Part III: read image
+ 0.092457 s => Part IV: allocate variables
+ 1.639228 s => Part V: compute
+ 1.319159 s => Part VI: write image to file
+ 0.026056 s => Part VII: get average of sum of pixels for testing and calculate GFLOPS
+ 0.026056 s => Part VIII: deallocate variables
+Total time:  3.584996 s
+Average of sum of pixels: 116.080063
+GFLOPS: 49.160511
+Parallel V4 - Shared Memory and extra optimizations, CK1: 1, CK2: 1, Yes Pinned
+Reading image...
+Image Read. Width : 5184, Height : 3456, nComp: 1
+
+	Blocks per grid: (648, 432, 1)
+	Threads per block: (8, 8, 1)
+
+	Reduction Info: 
+		Lvl. 1: (5184,3456) image reduced to (648 * 432) array.
+		Lvl. 2: That (279936) reduced to a (4374) array.
+
+Time spent in different stages of the application:
+ 0.000003 s => Part I: allocate and initialize variables
+ 0.000015 s => Part II: parse command line arguments
+ 0.014183 s => Part III: read image
+ 0.101234 s => Part IV: allocate variables
+ 1.621709 s => Part V: compute
+ 2.145874 s => Part VI: write image to file
+ 0.024915 s => Part VII: get average of sum of pixels for testing and calculate GFLOPS
+ 0.024915 s => Part VIII: deallocate variables
+Total time:  3.949368 s
+Average of sum of pixels: 116.080063
+GFLOPS: 49.691574
+Parallel V4 - Shared Memory and extra optimizations, CK1: 1, CK2: 2, Yes Pinned
+Reading image...
+Image Read. Width : 5184, Height : 3456, nComp: 1
+
+	Blocks per grid: (648, 432, 1)
+	Threads per block: (8, 8, 1)
+
+	Reduction Info: 
+		Lvl. 1: (5184,3456) image reduced to (648 * 432) array.
+		Lvl. 2: That (279936) reduced to a (4374) array.
+
+Time spent in different stages of the application:
+ 0.000001 s => Part I: allocate and initialize variables
+ 0.000007 s => Part II: parse command line arguments
+ 0.012987 s => Part III: read image
+ 0.100338 s => Part IV: allocate variables
+ 1.641077 s => Part V: compute
+ 2.300508 s => Part VI: write image to file
+ 0.024701 s => Part VII: get average of sum of pixels for testing and calculate GFLOPS
+ 0.024701 s => Part VIII: deallocate variables
+Total time:  4.120646 s
+Average of sum of pixels: 116.080063
+GFLOPS: 49.105118
+##################################################################################################
+Parallel V4 - Shared Memory and extra optimizations, CK1: 2, CK2: 1, No Pinned
+Reading image...
+Image Read. Width : 5184, Height : 3456, nComp: 1
+
+	Blocks per grid: (648, 432, 1)
+	Threads per block: (8, 8, 1)
+
+	Reduction Info: 
+		Lvl. 1: (5184,3456) image reduced to (648 * 432) array.
+		Lvl. 2: That (279936) reduced to a (4374) array.
+
+Time spent in different stages of the application:
+ 0.000001 s => Part I: allocate and initialize variables
+ 0.000007 s => Part II: parse command line arguments
+ 0.014538 s => Part III: read image
+ 0.091750 s => Part IV: allocate variables
+ 1.656777 s => Part V: compute
+ 1.323380 s => Part VI: write image to file
+ 0.024826 s => Part VII: get average of sum of pixels for testing and calculate GFLOPS
+ 0.024826 s => Part VIII: deallocate variables
+Total time:  3.148633 s
+Average of sum of pixels: 116.080063
+GFLOPS: 48.639790
+Parallel V4 - Shared Memory and extra optimizations, CK1: 2, CK2: 2, No Pinned
+Reading image...
+Image Read. Width : 5184, Height : 3456, nComp: 1
+
+	Blocks per grid: (648, 432, 1)
+	Threads per block: (8, 8, 1)
+
+	Reduction Info: 
+		Lvl. 1: (5184,3456) image reduced to (648 * 432) array.
+		Lvl. 2: That (279936) reduced to a (4374) array.
+
+Time spent in different stages of the application:
+ 0.000001 s => Part I: allocate and initialize variables
+ 0.000007 s => Part II: parse command line arguments
+ 0.014823 s => Part III: read image
+ 0.093374 s => Part IV: allocate variables
+ 1.672938 s => Part V: compute
+ 1.318830 s => Part VI: write image to file
+ 0.025241 s => Part VII: get average of sum of pixels for testing and calculate GFLOPS
+ 0.025241 s => Part VIII: deallocate variables
+Total time:  3.162752 s
+Average of sum of pixels: 116.080063
+GFLOPS: 48.169910
+Parallel V4 - Shared Memory and extra optimizations, CK1: 2, CK2: 1, Yes Pinned
+Reading image...
+Image Read. Width : 5184, Height : 3456, nComp: 1
+
+	Blocks per grid: (648, 432, 1)
+	Threads per block: (8, 8, 1)
+
+	Reduction Info: 
+		Lvl. 1: (5184,3456) image reduced to (648 * 432) array.
+		Lvl. 2: That (279936) reduced to a (4374) array.
+
+Time spent in different stages of the application:
+ 0.000001 s => Part I: allocate and initialize variables
+ 0.000006 s => Part II: parse command line arguments
+ 0.014254 s => Part III: read image
+ 0.101246 s => Part IV: allocate variables
+ 1.658445 s => Part V: compute
+ 2.145231 s => Part VI: write image to file
+ 0.024534 s => Part VII: get average of sum of pixels for testing and calculate GFLOPS
+ 0.024534 s => Part VIII: deallocate variables
+Total time:  3.985078 s
+Average of sum of pixels: 116.080063
+GFLOPS: 48.590862
+Parallel V4 - Shared Memory and extra optimizations, CK1: 2, CK2: 2, Yes Pinned
+Reading image...
+Image Read. Width : 5184, Height : 3456, nComp: 1
+
+	Blocks per grid: (648, 432, 1)
+	Threads per block: (8, 8, 1)
+
+	Reduction Info: 
+		Lvl. 1: (5184,3456) image reduced to (648 * 432) array.
+		Lvl. 2: That (279936) reduced to a (4374) array.
+
+Time spent in different stages of the application:
+ 0.000002 s => Part I: allocate and initialize variables
+ 0.000006 s => Part II: parse command line arguments
+ 0.012577 s => Part III: read image
+ 0.100544 s => Part IV: allocate variables
+ 1.673283 s => Part V: compute
+ 2.147290 s => Part VI: write image to file
+ 0.025087 s => Part VII: get average of sum of pixels for testing and calculate GFLOPS
+ 0.025087 s => Part VIII: deallocate variables
+Total time:  3.999797 s
+Average of sum of pixels: 116.080063
+GFLOPS: 48.159981
+##################################################################################################
+Parallel V4 - Shared Memory and extra optimizations, CK1: 3, CK2: 1, No Pinned
+Reading image...
+Image Read. Width : 5184, Height : 3456, nComp: 1
+
+	Blocks per grid: (648, 432, 1)
+	Threads per block: (8, 8, 1)
+
+	Reduction Info: 
+		Lvl. 1: (5184,3456) image reduced to (648 * 432) array.
+		Lvl. 2: That (279936) reduced to a (4374) array.
+
+Time spent in different stages of the application:
+ 0.000001 s => Part I: allocate and initialize variables
+ 0.000006 s => Part II: parse command line arguments
+ 0.012718 s => Part III: read image
+ 0.092113 s => Part IV: allocate variables
+ 1.601353 s => Part V: compute
+ 1.322735 s => Part VI: write image to file
+ 0.025585 s => Part VII: get average of sum of pixels for testing and calculate GFLOPS
+ 0.025585 s => Part VIII: deallocate variables
+Total time:  3.091733 s
+Average of sum of pixels: 116.080063
+GFLOPS: 50.323250
+Parallel V4 - Shared Memory and extra optimizations, CK1: 3, CK2: 2, No Pinned
+Reading image...
+Image Read. Width : 5184, Height : 3456, nComp: 1
+
+	Blocks per grid: (648, 432, 1)
+	Threads per block: (8, 8, 1)
+
+	Reduction Info: 
+		Lvl. 1: (5184,3456) image reduced to (648 * 432) array.
+		Lvl. 2: That (279936) reduced to a (4374) array.
+
+Time spent in different stages of the application:
+ 0.000001 s => Part I: allocate and initialize variables
+ 0.000006 s => Part II: parse command line arguments
+ 0.014405 s => Part III: read image
+ 0.092714 s => Part IV: allocate variables
+ 1.619015 s => Part V: compute
+ 1.345592 s => Part VI: write image to file
+ 0.024952 s => Part VII: get average of sum of pixels for testing and calculate GFLOPS
+ 0.024952 s => Part VIII: deallocate variables
+Total time:  3.134269 s
+Average of sum of pixels: 116.080063
+GFLOPS: 49.774265
+Parallel V4 - Shared Memory and extra optimizations, CK1: 3, CK2: 1, Yes Pinned
+Reading image...
+Image Read. Width : 5184, Height : 3456, nComp: 1
+
+	Blocks per grid: (648, 432, 1)
+	Threads per block: (8, 8, 1)
+
+	Reduction Info: 
+		Lvl. 1: (5184,3456) image reduced to (648 * 432) array.
+		Lvl. 2: That (279936) reduced to a (4374) array.
+
+Time spent in different stages of the application:
+ 0.000001 s => Part I: allocate and initialize variables
+ 0.000015 s => Part II: parse command line arguments
+ 0.014217 s => Part III: read image
+ 0.100827 s => Part IV: allocate variables
+ 1.602507 s => Part V: compute
+ 2.150508 s => Part VI: write image to file
+ 0.025298 s => Part VII: get average of sum of pixels for testing and calculate GFLOPS
+ 0.025298 s => Part VIII: deallocate variables
+Total time:  3.934213 s
+Average of sum of pixels: 116.080063
+GFLOPS: 50.287003
+Parallel V4 - Shared Memory and extra optimizations, CK1: 3, CK2: 2, Yes Pinned
+Reading image...
+Image Read. Width : 5184, Height : 3456, nComp: 1
+
+	Blocks per grid: (648, 432, 1)
+	Threads per block: (8, 8, 1)
+
+	Reduction Info: 
+		Lvl. 1: (5184,3456) image reduced to (648 * 432) array.
+		Lvl. 2: That (279936) reduced to a (4374) array.
+
+Time spent in different stages of the application:
+ 0.000001 s => Part I: allocate and initialize variables
+ 0.000007 s => Part II: parse command line arguments
+ 0.014103 s => Part III: read image
+ 0.099978 s => Part IV: allocate variables
+ 1.618677 s => Part V: compute
+ 2.152272 s => Part VI: write image to file
+ 0.025015 s => Part VII: get average of sum of pixels for testing and calculate GFLOPS
+ 0.025015 s => Part VIII: deallocate variables
+Total time:  3.950880 s
+Average of sum of pixels: 116.080063
+GFLOPS: 49.784653
+##################################################################################################
+Parallel V4 - Shared Memory and extra optimizations, CK1: 4, CK2: 1, No Pinned
+Reading image...
+Image Read. Width : 5184, Height : 3456, nComp: 1
+
+	Blocks per grid: (648, 432, 1)
+	Threads per block: (8, 8, 1)
+
+	Reduction Info: 
+		Lvl. 1: (5184,3456) image reduced to (648 * 432) array.
+		Lvl. 2: That (279936) reduced to a (4374) array.
+
+Time spent in different stages of the application:
+ 0.000001 s => Part I: allocate and initialize variables
+ 0.000007 s => Part II: parse command line arguments
+ 0.014067 s => Part III: read image
+ 0.092680 s => Part IV: allocate variables
+ 1.571907 s => Part V: compute
+ 1.323389 s => Part VI: write image to file
+ 0.026413 s => Part VII: get average of sum of pixels for testing and calculate GFLOPS
+ 0.026413 s => Part VIII: deallocate variables
+Total time:  3.065863 s
+Average of sum of pixels: 116.080063
+GFLOPS: 51.265934
+Parallel V4 - Shared Memory and extra optimizations, CK1: 4, CK2: 2, No Pinned
+Reading image...
+Image Read. Width : 5184, Height : 3456, nComp: 1
+
+	Blocks per grid: (648, 432, 1)
+	Threads per block: (8, 8, 1)
+
+	Reduction Info: 
+		Lvl. 1: (5184,3456) image reduced to (648 * 432) array.
+		Lvl. 2: That (279936) reduced to a (4374) array.
+
+Time spent in different stages of the application:
+ 0.000002 s => Part I: allocate and initialize variables
+ 0.000006 s => Part II: parse command line arguments
+ 0.014107 s => Part III: read image
+ 0.092597 s => Part IV: allocate variables
+ 1.590110 s => Part V: compute
+ 1.314217 s => Part VI: write image to file
+ 0.024727 s => Part VII: get average of sum of pixels for testing and calculate GFLOPS
+ 0.024727 s => Part VIII: deallocate variables
+Total time:  3.073063 s
+Average of sum of pixels: 116.080063
+GFLOPS: 50.679066
+Parallel V4 - Shared Memory and extra optimizations, CK1: 4, CK2: 1, Yes Pinned
+Reading image...
+Image Read. Width : 5184, Height : 3456, nComp: 1
+
+	Blocks per grid: (648, 432, 1)
+	Threads per block: (8, 8, 1)
+
+	Reduction Info: 
+		Lvl. 1: (5184,3456) image reduced to (648 * 432) array.
+		Lvl. 2: That (279936) reduced to a (4374) array.
+
+Time spent in different stages of the application:
+ 0.000001 s => Part I: allocate and initialize variables
+ 0.000007 s => Part II: parse command line arguments
+ 0.014075 s => Part III: read image
+ 0.102343 s => Part IV: allocate variables
+ 1.575404 s => Part V: compute
+ 2.143019 s => Part VI: write image to file
+ 0.024715 s => Part VII: get average of sum of pixels for testing and calculate GFLOPS
+ 0.024715 s => Part VIII: deallocate variables
+Total time:  3.900897 s
+Average of sum of pixels: 116.080063
+GFLOPS: 51.152138
+Parallel V4 - Shared Memory and extra optimizations, CK1: 4, CK2: 2, Yes Pinned
+Reading image...
+Image Read. Width : 5184, Height : 3456, nComp: 1
+
+	Blocks per grid: (648, 432, 1)
+	Threads per block: (8, 8, 1)
+
+	Reduction Info: 
+		Lvl. 1: (5184,3456) image reduced to (648 * 432) array.
+		Lvl. 2: That (279936) reduced to a (4374) array.
+
+Time spent in different stages of the application:
+ 0.000001 s => Part I: allocate and initialize variables
+ 0.000007 s => Part II: parse command line arguments
+ 0.013761 s => Part III: read image
+ 0.102892 s => Part IV: allocate variables
+ 1.589618 s => Part V: compute
+ 2.166423 s => Part VI: write image to file
+ 0.024654 s => Part VII: get average of sum of pixels for testing and calculate GFLOPS
+ 0.024654 s => Part VIII: deallocate variables
+Total time:  3.938151 s
+Average of sum of pixels: 116.080063
+GFLOPS: 50.694748

@@ -1,0 +1,335 @@
+Setting stack size to unlimited,,,core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 2062728
+max locked memory       (kbytes, -l) unlimited
+max memory size         (kbytes, -m) 460800000
+open files                      (-n) 1024
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 4096
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+printf: usage: printf [-v var] format [arguments]
+Running Job,,,!===============================================================================Running compiled binary,,,
+Experiment 1 - Compact Affinity
+
+1,1 - Vanilla ParallelismSerial, size 14Elapsed time: 4,901564
+Parallel, size 14, 2 threadsUsing 2 threads,
+365596 solutions found,
+Elapsed time: 4,549211
+Parallel, size 14, 4 threadsUsing 4 threads,
+365596 solutions found,
+Elapsed time: 4,261908
+Parallel, size 14, 8 threadsUsing 8 threads,
+365596 solutions found,
+Elapsed time: 3,889446
+Parallel, size 14, 16 threadsUsing 16 threads,
+365596 solutions found,
+Elapsed time: 4,745944
+Parallel, size 14, 32 threadsUsing 32 threads,
+365596 solutions found,
+Elapsed time: 3,699858
+
+1,2 - Parallelism with CutoffSerial, size 14Elapsed time: 4,886486
+Parallel, size 14, 2 threads, cutoff 5Using cutoff depth of 5 with 2 threads,
+365596 solutions found,
+Elapsed time: 5,314332
+Parallel, size 14, 4 threads, cutoff 5Using cutoff depth of 5 with 4 threads,
+365596 solutions found,
+Elapsed time: 3,270892
+Parallel, size 14, 8 threads, cutoff 5Using cutoff depth of 5 with 8 threads,
+365596 solutions found,
+Elapsed time: 2,628094
+Parallel, size 14, 16 threads, cutoff 5Using cutoff depth of 5 with 16 threads,
+365596 solutions found,
+Elapsed time: 2,476990
+Parallel, size 14, 32 threads, cutoff 5Using cutoff depth of 5 with 32 threads,
+365596 solutions found,
+Elapsed time: 3,996258
+
+1,3 - Early StoppingSerial, size 14, early stopSolution #1-
+ 1  0  0  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  1  0  0  0 
+ 0  1  0  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  0  0  0  0  0  0 
+ 0  0  1  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  1  0  0 
+ 0  0  0  1  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  1  0 
+ 0  0  0  0  0  0  0  0  0  1  0  0  0  0 
+ 0  0  0  0  0  1  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  0  1 
+ 0  0  0  0  1  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  1  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  0  0  0  0  0 
+
+Elapsed time: 0,000926
+Parallel, size 14, 2 threads, early stopUsing 2 threads with early stopping,
+Solution #1-
+ 0  0  0  0  0  0  0  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  1  0  0  0  0 
+ 0  0  0  0  0  0  1  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  1  0 
+ 0  0  0  0  0  1  0  0  0  0  0  0  0  0 
+ 1  0  0  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  1  0  0 
+ 0  0  0  0  1  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  1  0  0  0 
+ 0  0  0  1  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  0  1 
+ 0  0  1  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  0  0  0  0  0 
+ 0  1  0  0  0  0  0  0  0  0  0  0  0  0 
+
+1 solutions found,
+Elapsed time: 0,026405
+Parallel, size 14, 4 threads, early stopUsing 4 threads with early stopping,
+Solution #1-
+ 0  0  0  0  0  0  0  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  1  0  0 
+ 0  0  0  0  0  0  0  0  1  0  0  0  0  0 
+ 0  0  0  0  0  1  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  0  1 
+ 0  0  0  0  1  0  0  0  0  0  0  0  0  0 
+ 1  0  0  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  1  0 
+ 0  0  0  1  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  1  0  0  0  0 
+ 0  0  0  0  0  0  1  0  0  0  0  0  0  0 
+ 0  0  1  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  1  0  0  0 
+ 0  1  0  0  0  0  0  0  0  0  0  0  0  0 
+
+1 solutions found,
+Elapsed time: 0,023124
+Parallel, size 14, 8 threads, early stopUsing 8 threads with early stopping,
+Solution #1-
+ 0  0  0  0  0  0  0  0  0  1  0  0  0  0 
+ 1  0  0  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  0  1 
+ 0  0  0  0  0  0  0  1  0  0  0  0  0  0 
+ 0  1  0  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  1  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  1  0 
+ 0  0  0  0  0  0  0  0  0  0  1  0  0  0 
+ 0  0  0  0  1  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  1  0  0 
+ 0  0  0  1  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  1  0  0  0  0  0  0  0  0 
+ 0  0  1  0  0  0  0  0  0  0  0  0  0  0 
+
+1 solutions found,
+Elapsed time: 0,026513
+Parallel, size 14, 16 threads, early stopUsing 16 threads with early stopping,
+Solution #1-
+ 0  0  0  0  0  1  0  0  0  0  0  0  0  0 
+ 1  0  0  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  0  0  0  0  0 
+ 0  0  0  0  0  0  1  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  1  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  0  1 
+ 0  0  0  0  0  0  0  0  0  0  1  0  0  0 
+ 0  0  0  0  1  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  1  0  0  0  0 
+ 0  0  0  1  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  1  0 
+ 0  0  1  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  0  0  0  0  0  0 
+ 0  1  0  0  0  0  0  0  0  0  0  0  0  0 
+
+1 solutions found,
+Elapsed time: 0,025339
+Parallel, size 14, 32 threads, early stopUsing 32 threads with early stopping,
+Solution #1-
+ 0  0  0  0  0  0  0  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  1  0  0 
+ 0  0  0  0  0  0  0  0  1  0  0  0  0  0 
+ 0  0  0  0  0  1  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  0  1 
+ 0  0  0  0  1  0  0  0  0  0  0  0  0  0 
+ 1  0  0  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  1  0 
+ 0  0  0  1  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  1  0  0  0  0 
+ 0  0  0  0  0  0  1  0  0  0  0  0  0  0 
+ 0  0  1  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  1  0  0  0 
+ 0  1  0  0  0  0  0  0  0  0  0  0  0  0 
+
+1 solutions found,
+Elapsed time: 0,025943
+
+1,4 - Problem SizesParallel, size 13, 32 threadsUsing 32 threads,
+73712 solutions found,
+Elapsed time: 0,736398
+Parallel, size 14, 32 threadsUsing 32 threads,
+365596 solutions found,
+Elapsed time: 5,098751
+Parallel, size 15, 32 threadsUsing 32 threads,
+2279184 solutions found,
+Elapsed time: 23,533762
+
+Experiment 2 - Scatter Affinity
+
+2,1 - Vanilla ParallelismSerial, size 14Elapsed time: 4,882991
+Parallel, size 14, 2 threadsUsing 2 threads,
+365596 solutions found,
+Elapsed time: 4,761403
+Parallel, size 14, 4 threadsUsing 4 threads,
+365596 solutions found,
+Elapsed time: 3,803143
+Parallel, size 14, 8 threadsUsing 8 threads,
+365596 solutions found,
+Elapsed time: 4,318719
+Parallel, size 14, 16 threadsUsing 16 threads,
+365596 solutions found,
+Elapsed time: 4,348682
+Parallel, size 14, 32 threadsUsing 32 threads,
+365596 solutions found,
+Elapsed time: 4,749445
+
+2,2 - Parallelism with CutoffSerial, size 14Elapsed time: 4,879583
+Parallel, size 14, 2 threads, cutoff 5Using cutoff depth of 5 with 2 threads,
+365596 solutions found,
+Elapsed time: 7,150110
+Parallel, size 14, 4 threads, cutoff 5Using cutoff depth of 5 with 4 threads,
+365596 solutions found,
+Elapsed time: 4,079940
+Parallel, size 14, 8 threads, cutoff 5Using cutoff depth of 5 with 8 threads,
+365596 solutions found,
+Elapsed time: 3,737083
+Parallel, size 14, 16 threads, cutoff 5Using cutoff depth of 5 with 16 threads,
+365596 solutions found,
+Elapsed time: 3,875820
+Parallel, size 14, 32 threads, cutoff 5Using cutoff depth of 5 with 32 threads,
+365596 solutions found,
+Elapsed time: 3,880598
+
+2,3 - Early StoppingSerial, size 14, early stopSolution #1-
+ 1  0  0  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  1  0  0  0 
+ 0  1  0  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  0  0  0  0  0  0 
+ 0  0  1  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  1  0  0 
+ 0  0  0  1  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  1  0 
+ 0  0  0  0  0  0  0  0  0  1  0  0  0  0 
+ 0  0  0  0  0  1  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  0  1 
+ 0  0  0  0  1  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  1  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  0  0  0  0  0 
+
+Elapsed time: 0,001605
+Parallel, size 14, 2 threads, early stopUsing 2 threads with early stopping,
+Solution #1-
+ 1  0  0  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  0  0  0  0  0 
+ 0  1  0  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  1  0 
+ 0  0  0  0  0  0  1  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  1  0  0 
+ 0  0  0  0  0  1  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  1  0  0  0 
+ 0  0  0  0  1  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  0  1 
+ 0  0  0  1  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  1  0  0  0  0 
+ 0  0  1  0  0  0  0  0  0  0  0  0  0  0 
+
+1 solutions found,
+Elapsed time: 0,022225
+Parallel, size 14, 4 threads, early stopUsing 4 threads with early stopping,
+Solution #1-
+ 0  0  0  0  0  0  0  0  1  0  0  0  0  0 
+ 0  0  0  0  0  1  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  0  1 
+ 0  0  0  0  0  0  0  0  0  0  0  1  0  0 
+ 0  0  0  0  0  0  1  0  0  0  0  0  0  0 
+ 0  0  0  0  1  0  0  0  0  0  0  0  0  0 
+ 1  0  0  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  1  0  0  0 
+ 0  0  0  1  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  1  0  0  0  0 
+ 0  0  1  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  1  0 
+ 0  1  0  0  0  0  0  0  0  0  0  0  0  0 
+
+1 solutions found,
+Elapsed time: 0,026168
+Parallel, size 14, 8 threads, early stopUsing 8 threads with early stopping,
+Solution #1-
+ 0  1  0  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  1  0  0  0 
+ 0  0  0  0  0  0  0  0  1  0  0  0  0  0 
+ 0  0  0  0  0  0  1  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  1  0 
+ 0  0  0  0  0  0  0  1  0  0  0  0  0  0 
+ 1  0  0  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  1  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  0  1 
+ 0  0  0  0  1  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  1  0  0  0  0 
+ 0  0  0  1  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  1  0  0  0  0  0  0  0  0 
+ 0  0  1  0  0  0  0  0  0  0  0  0  0  0 
+
+1 solutions found,
+Elapsed time: 0,023812
+Parallel, size 14, 16 threads, early stopUsing 16 threads with early stopping,
+Solution #1-
+ 0  0  0  0  0  1  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  0  0  0  0  0  0 
+ 1  0  0  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  1  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  1  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  0  1 
+ 0  0  0  0  0  0  0  0  0  0  1  0  0  0 
+ 0  0  0  0  1  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  1  0  0  0  0 
+ 0  0  0  1  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  1  0 
+ 0  0  1  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  0  0  0  0  0 
+ 0  1  0  0  0  0  0  0  0  0  0  0  0  0 
+
+1 solutions found,
+Elapsed time: 0,022502
+Parallel, size 14, 32 threads, early stopUsing 32 threads with early stopping,
+Solution #1-
+ 0  0  0  0  0  0  1  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  0  0  0  0  0 
+ 0  0  0  0  0  1  0  0  0  0  0  0  0  0 
+ 1  0  0  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  0  1 
+ 0  0  0  0  0  0  0  0  0  0  1  0  0  0 
+ 0  0  0  0  1  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  1  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  1  0 
+ 0  0  0  1  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  1  0  0 
+ 0  0  1  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  0  0  0  0  0  0 
+ 0  1  0  0  0  0  0  0  0  0  0  0  0  0 
+
+1 solutions found,
+Elapsed time: 0,025097
+
+2,4 - Problem SizesParallel, size 13, 32 threadsUsing 32 threads,
+73712 solutions found,
+Elapsed time: 0,852791
+Parallel, size 14, 32 threadsUsing 32 threads,
+365596 solutions found,
+Elapsed time: 4,721638
+Parallel, size 15, 32 threadsUsing 32 threads,
+2279184 solutions found,
+Elapsed time: 30,747782
